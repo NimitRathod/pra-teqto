@@ -39,7 +39,7 @@ class PdfUploadController extends Controller
         // return $request->all();
         Validator::validate($request->all(), [
             'category_id' => 'required',
-            'sub_category_id' => 'required',
+            'sub_category_id' => 'nullable',
             'pdf_upload' => 'required|mimes:pdf|max:5120'
         ]);
         try{
@@ -94,7 +94,7 @@ class PdfUploadController extends Controller
         // return $request->all();
         Validator::validate($request->all(), [
             'category_id' => 'required',
-            'sub_category_id' => 'required',
+            'sub_category_id' => 'nullable',
             'pdf_upload' => 'nullable|mimes:pdf|max:5120'
         ]);
         try{
